@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>WhatsApp-like Chat Application</title>
+    <style>
+        body {
+            font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+            background-color: #E0F7FA; /* Light ocean blue background */
+            margin: 0;
+            padding: 0;
+        }
+
+        .chat-container {
+            display: flex;
+            height: 100vh;
+            max-width: 720px;
+            margin: auto;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        }
+
+        .contact-list {
+            flex: 1;
+            background-color: #0277BD; /* Ocean blue for contact list */
+            color: white; /* White text for contrast */
+            overflow-y: auto;
+        }
+
+        .contact-list h2 {
+            background-color: #01579B; /* Darker shade for header */
+            margin: 0;
+            padding: 10px;
+            text-align: center;
+        }
+
+        .chat-window {
+            flex: 2;
+            display: flex;
+            flex-direction: column;
+            border-left: 1px solid #0277BD;
+        }
+
+        .chat-messages {
+            flex-grow: 1;
+            padding: 10px;
+            overflow-y: auto;
+            background-color: lightskyblue; /* Lighter ocean blue for chat area */
+        }
+
+        .message-input {
+            background-color: white; /* Brighter shade for input area */
+            padding: 10px;
+            display: flex;
+        }
+
+        .message-input input {
+            flex-grow: 1;
+            padding: 8px;
+            border: 1px solid #29B6F6;
+            border-radius: 20px;
+            margin-right: 5px;
+        }
+
+        .message-input button {
+            border: none;
+            background-color: #0288D1; /* Dark ocean blue for send button */
+            color: white;
+            padding: 8px 15px;
+            border-radius: 50%;
+            cursor: pointer;
+        }
+
+        .message-input button:hover {
+            background-color: #0277BD;
+        }
+
+        .contact {
+            padding: 10px;
+            border-bottom: 1px solid #01579B;
+            cursor: pointer;
+        }
+
+        .contact:hover {
+            background-color: #0288D1;
+        }
+    </style>
+</head>
+<body>
+    <div class="chat-container">
+        <div class="contact-list">
+            <h2>Chats</h2>
+            <div class="contact">Sam Altman</div>
+            <div class="contact">Satya Nadella</div>
+            <!-- Add more contacts here -->
+        </div>
+        <div class="chat-window">
+            <div class="chat-messages" id="chat-messages">
+                <!-- Chat messages will be displayed here -->
+            </div>
+            <div class="message-input">
+                <input type="text" id="message" placeholder="Type a message...">
+                <button id="send">Send</button>
+            </div>
+        </div>
+    </div>
+
+  <script>
+    document.getElementById('send').addEventListener('click', function () {
+      document.getElementById('send').addEventListener('click', function () {
+        var messageInput = document.getElementById('message');
+        var message = messageInput.value.trim();
+        if (message) {
+          // Display the user's message
+          var chatMessages = document.getElementById('chat-messages');
+          chatMessages.innerHTML += '<p><strong>You:</strong> ' + message + '</p>';
+
+          // Clear the message input field
+          messageInput.value = '';
+
+          // Call the API for an AI-generated response
+          fetch('https://api.example.com/getResponse?message=' + encodeURIComponent(message))
+            .then(response => response.json())
+            .then(data => {
+              // Append the AI response
+              chatMessages.innerHTML += '<p><strong>AI Reply:</strong> ' + data.reply + '</p>';
+              chatMessages.scrollTop = chatMessages.scrollHeight; // Scroll to the bottom
+            })
+            .catch(error => console.error('Error:', error));
+        }
+      });
+      var messageInput = document.getElementById('message');
+      var message = messageInput.value.trim();
+      if (message) {
+        // Display the user's message
+        var chatMessages = document.getElementById('chat-messages');
+        chatMessages.innerHTML += '<p><strong>You:</strong> ' + message + '</p>';
+
+        // Clear the message input field
+        messageInput.value = '';
+
+        // Automated reply logic
+        var replies = [
+          "Thanks for y",
+          "Same here, busy but excited about our new journey together. Just wanted to check in and see how you're feeling about everything.",
+          "Everyone's thrilled. There's a buzz around the office about the new skills and perspectives your team brings.",
+          " I'm sure it will. Can't wait to see what you guys are up to. We should grab lunch sometime and chat more.",
+          "Absolutely. Let's aim for a more connected and collaborative environment. We're stronger together.",
+          "I'm happy to hear that. Let's chat more and see what we can do.",
+          " Take care and let's touch base next week. Have a great day!",
+          // Add more replies as needed...
+        ];
+
+        // Select a random reply from the list
+        var randomReply = replies[Math.floor(Math.random() * replies.length)];
+
+        // Append the selected reply after a short delay
+        setTimeout(function () {
+          chatMessages.innerHTML += '<p><strong>Reply:</strong> ' + randomReply + '</p>';
+          chatMessages.scrollTop = chatMessages.scrollHeight; // Scroll to the bottom
+        }, 500);
+      }
+    });
+  </script>
+</body>
+
+</html>
