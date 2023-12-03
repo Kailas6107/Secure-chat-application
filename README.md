@@ -1,22 +1,6 @@
 <html>
 <head>
-    <title>Secure Chat Application</title>
-    <style>
-        body { font-family: Arial, sans-serif; line-height: 1.6; }
-        .container { width: 80%; margin: auto; overflow: hidden; }
-        header { background: #333; color: white; padding-top: 30px; min-height: 70px; border-bottom: #bbb 3px solid; }
-        header a { color: #fff; text-decoration: none; text-transform: uppercase; font-size: 16px; }
-        header ul { padding: 0; margin: 0; list-style: none; overflow: hidden; }
-        header li { float: left; display: inline; padding: 0 20px 0 20px; }
-        header #branding { float: left; }
-        header #branding h1 { margin: 0; }
-        header nav { float: right; margin-top: 10px; }
-        header .highlight, header .current a { color: #e8491d; font-weight: bold; }
-        header a:hover { color: #ffffff; font-weight: bold; }
-        .banner { padding: 10px; margin-bottom: 20px; background: #e8491d; color: white; text-align: center; }
-        .image-holder { text-align: center; margin-top: 20px; }
-        img { width: 70%; height: auto; }
-    </style>
+    
 </head>
 <body>
     <header>
@@ -33,7 +17,6 @@
             </nav> 
         </div>
     </header>
-
     <div class="container">
         <section id="overview">
             <h2>Project Overview</h2>
@@ -48,35 +31,26 @@ In terms of security measures and compliance, I made sure that the application a
 The journey of creating the Secure Chat Application has been both challenging and rewarding. It has allowed me to contribute to the digital world in a meaningful way, providing a secure platform for people to communicate freely. As I continue to enhance and expand its features, my commitment to digital privacy and security remains steadfast..</p>
             <!-- Placeholder for image -->
         </section>
-
-        <section id="features">
+<section id="features">
             <h2>Key Features and Functionalities</h2>
             <p>End-to-End Encryption: The centerpiece of this application is its powerful end-to-end encryption. Using cutting-edge cryptographic algorithms, it guarantees that only the sender and the intended recipient can read the messages, effectively neutralizing risks like eavesdropping or data interception.
-
-                User Authentication: The application integrates a robust user authentication mechanism. It combines password protection with an optional two-factor authentication system, fortifying user identity verification and enhancing overall security.
-                
-                Self-Destructing Messages: Adding to its array of privacy features, the application allows users to send self-destructing messages. These messages vanish after a predetermined duration or once they are viewed, providing a secure channel for sharing sensitive information.
-                
-                Message Encryption Status: A unique aspect of this application is the visual confirmation of message encryption. Users can easily identify the security status of their messages through clear indicators within the app, providing reassurance about their communication's security.
-                
-                Data Integrity: This application is not just about securing messages but also ensuring their integrity. It meticulously verifies that the content of the messages remains unaltered and untampered from the point of sending to reception.
-                
-                User-Friendly Interface: Balancing its advanced security features, the app offers a user-friendly and intuitive interface. This design philosophy makes secure communication accessible and straightforward for all users, regardless of their technical background.
-                
-                Cross-Platform Compatibility: Recognizing the diverse device ecosystem, the application is engineered for seamless functionality across various platforms. Whether users are on mobile devices or desktops, they are assured a consistent and secure experience.</p>
+User Authentication: The application integrates a robust user authentication mechanism. It combines password protection with an optional two-factor authentication system, fortifying user identity verification and enhancing overall security.
+Self-Destructing Messages: Adding to its array of privacy features, the application allows users to send self-destructing messages. These messages vanish after a predetermined duration or once they are viewed, providing a secure channel for sharing sensitive information.
+Message Encryption Status: A unique aspect of this application is the visual confirmation of message encryption. Users can easily identify the security status of their messages through clear indicators within the app, providing reassurance about their communication's security.
+Data Integrity: This application is not just about securing messages but also ensuring their integrity. It meticulously verifies that the content of the messages remains unaltered and untampered from the point of sending to reception.
+User-Friendly Interface: Balancing its advanced security features, the app offers a user-friendly and intuitive interface. This design philosophy makes secure communication accessible and straightforward for all users, regardless of their technical background.
+ Cross-Platform Compatibility: Recognizing the diverse device ecosystem, the application is engineered for seamless functionality across various platforms. Whether users are on mobile devices or desktops, they are assured a consistent and secure experience.</p>
             <!-- Placeholder for feature image -->
             <div class="image-holder">
                 <img src="chatdesign.png" alt="Chat App Features">
             </div>
         </section>
-
         <section id="compliance">
             <h2>Security Measures and Compliance</h2>
             <p>Industry-Standard Compliance: The application adheres to stringent security protocols and privacy regulations. It aligns with the highest standards of data protection, ensuring trust and compliance in its operation.
                Ongoing Security Enhancements: To keep pace with the evolving digital threats, the application undergoes regular security audits. These audits are complemented by updates that address new vulnerabilities and threats, ensuring the application remains impregnable.</p>
             <!-- Placeholder for compliance image -->
         </section>
-
         <section id="significance">
             <h2>Project Significance</h2>
             <p>The Secure Chat Application is more than just a messaging tool; it is a testament to the commitment to digital privacy and security.
