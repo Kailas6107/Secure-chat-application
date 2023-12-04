@@ -42,7 +42,7 @@ User-Friendly Interface: Balancing its advanced security features, the app offer
  Cross-Platform Compatibility: Recognizing the diverse device ecosystem, the application is engineered for seamless functionality across various platforms. Whether users are on mobile devices or desktops, they are assured a consistent and secure experience.</p>
             <!-- Placeholder for feature image -->
             <div class="image-holder">
-                <img src="chatdesign.png" alt="Chat App Features">
+                <img src="https://i.imgur.com/OaKe053.png" alt="Chat App Features">
             </div>
         </section>
         <section id="compliance">
